@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.example.androidsd1.cameragalleryapplication.SquareFrameLayout
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.spoyl.android.imagecrop.view.ImageCropView
+            xmlns:imagecrop="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_crop_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            imagecrop:setInnerGridMode="on"
+            imagecrop:gridInnerStroke="1dp"
+            imagecrop:gridInnerColor="#66ffffff"
+            imagecrop:setOuterGridMode="on"
+            imagecrop:gridOuterStroke="1dp"
+            imagecrop:gridOuterColor="#ffffff"/>
+
+    </com.example.androidsd1.cameragalleryapplication.SquareFrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/galleryView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:columnWidth="90dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
